@@ -1,8 +1,5 @@
-# Fitness Astro Template
-
-[Youtube Tutorial - Canva to Astro 4.0: Fitness Website](https://youtube.com/playlist?list=PLP5oBhNCHQF1VsRCSTpug63AYymmEvYpM&si=Y4A9d0PsXsRi-FlQ)
-
-[Live Preview](https://fitness-astro-template.netlify.app/)
+# Mobilização conservadora
+lading page do projeto
 
 ## 🚀 Project Structure
 
@@ -15,12 +12,14 @@ Inside of this Fitness Astro Template, you'll see the following folders and file
 ├── src/
 │   ├── components/
 │   │   └── About.astro
+|   |   └── About2.astro
 |   |   └── Card.astro -- not used
+|   |   └── Cards.astro
 |   |   └── Hero.astro
 |   |   └── HeroFooter.astro
 |   |   └── ImageCard.astro
-|   |   └── Offers.astro
-|   |   └── Testimonials.astro
+|   |   └── Icon.astro
+|   |   └── PerigosExtremaEsquerda.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
