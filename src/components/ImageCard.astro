@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  text: string;
+  imageURL: string;
+  callToAction: string;
+}
+const {title="", text = "", imageURL = "", callToAction= "" } = Astro.props;
+const buttonEnable = callToAction.length > 0
+const imageStyle = {
+  backgroundImage: `url(/images/${imageURL})`,
+  'background-position': 'center center'
+};
+---
+
+<div
+  class="py-48 bg-cover m-8 bg-gray-700 bg-blend-multiply"
+  style={imageStyle}
+>
+  <h2 class="text-white mb-7 uppercase text-4xl italic">
+    {title}
+  </h2>
+  <span class="text-white mb-7 uppercase text-1xl italic">
+    {text}
+  </span>
+  
+  {buttonEnable && <a class="yellowBG  p-2 uppercase text-black font-bold" href={callToAction}>Participar do grupo</a>}
+    
+</div>

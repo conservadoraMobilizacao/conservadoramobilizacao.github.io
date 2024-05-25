@@ -1,0 +1,24 @@
+---
+
+import { Image } from 'astro:assets';
+
+interface Props {
+  alt:string;
+  name:string;
+  herf:string;
+}
+const { alt='', name='', herf='' } = Astro.props;
+---
+<a href={herf}>
+    <Image src={'/images/icons/'+name} 
+    width={50} 
+    height={50} 
+    alt={alt} 
+    class="rounded-full bg-white object-cover"/>
+</a>
+
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>

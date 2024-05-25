@@ -1,0 +1,40 @@
+---
+interface Props{
+  companyName:string;
+}
+const {companyName} = Astro.props;
+
+const logoURL  = "logo.jpg"
+
+---
+<div class="logo flex" >
+    <figure>
+      <img src=`/images/${logoURL}`/>
+    </figure>
+    <span>
+      {companyName}
+    </span>
+</div>
+
+<style>
+  .logo{
+    max-width:186px;
+    position: Absolute;
+  }
+  .logo figure{
+    height: 186px;
+    width: 186px;
+  }
+  .logo figure img{
+    height: auto;
+    width: auto;
+    border-radius:50%;
+  }
+  .logo span{
+    padding: 5px;
+    height: 55px;
+    margin-left: 5px;
+    border-left: 1px solid #FFF;
+  }
+
+</style>

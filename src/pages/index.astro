@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import AboutTwo from '../components/About2.astro';
+import Cards from '../components/Cards.astro';
+import Card from '../components/Card.astro';
+import HeroFooter from '../components/HeroFooter.astro';
+import PerigosExtremaEsquerda from '../components/PerigosExtremaEsquerda.astro';
+---
+
+<Layout title="Mobilização Conservadora">
+	<main>
+	  <Hero callToAction='São paulo está em risco !', buttonText='Saiba mais' companyName='Mobilização Conservadora'/>
+	  <About linkText="/" imageOne='camara-legislativa2-600x800.png', imageTwo='prefeitura2-600x800.png' />
+	  <PerigosExtremaEsquerda />
+	  <Cards />
+	  <AboutTwo imageOne='logo.jpg', imageTwo='edson-salomao-600X800.png'/>
+	  <HeroFooter callToAction='São paulo precisa de você 🫵' />
+	</main>
+</Layout>
+

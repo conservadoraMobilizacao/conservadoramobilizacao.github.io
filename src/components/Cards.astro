@@ -1,0 +1,39 @@
+---
+import ImageCard from "./ImageCard.astro";
+const offers = [
+    {
+        imageURL:"amigos-conversando.jpg",
+        offerTitle:"1. Concientize as pessoas",
+        offerText:"Espalhe para familiares e amigos os riscos que estamos correndo.",
+        callToAction:""
+
+    },
+    {
+        imageURL:"hashtag3.jpg",
+        offerTitle:"2. Suba as tag's:",
+        offerText:"#SemEsquerda #SemBoulos #SemPsol #Sem50",
+        callToAction:""
+
+    },
+    {
+        imageURL:"grupo.jpg",
+        offerTitle:"3. Faça parte de nosso grupo no Whatsapp",
+        offerText:"",
+        callToAction:"https://wa.me/5511960809999?text=Ol%C3%A1%2C+vim+atrav%C3%A9s+do+site.+gostaria+de+fazer+parte+do+grupo+mobiliza%C3%A7%C3%A3o+conservadora"
+    }
+]
+---
+
+
+<section class="py-12 text-center">
+<h1 class="yellowText text-5xl italic uppercase">Você pode ajudar a impedir!</h1>
+<p class="text-white">A maioria da população desconhece o que eles realmente desejam, isso é proposital pois sabem que a maioria não aceita essas ideias.</p>
+<div class="grid grid-cols-1 md:grid-cols-3">
+{
+    offers.map((offer)=>(
+        <ImageCard imageURL={offer.imageURL} title={offer.offerTitle} text={offer.offerText} callToAction={offer.callToAction} />
+    ))
+}
+
+</div>
+</section>

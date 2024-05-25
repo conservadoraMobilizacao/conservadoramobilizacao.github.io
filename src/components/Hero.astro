@@ -1,0 +1,31 @@
+---
+interface Props {
+  callToAction: string;
+  buttonText: string;
+  companyName:string;
+  //    logoImage:string;
+}
+const { callToAction, buttonText, companyName } = Astro.props;
+import Logo from './Logo.astro';
+
+
+const headerURL = "cidade-sao-paulo.gif"
+
+const bgStyle = {
+  backgroundImage: `url('/images/${headerURL}')`,
+};
+---
+
+<header class="bg-cover bg-no-repeat bg-gray-500 bg-blend-multiply" style={bgStyle}>
+  <nav class="text-white uppercase pt-8 p-4 font-bold2">
+    <ul>
+      <li>
+        <Logo companyName={companyName}/>
+      </li>
+    </ul>
+  </nav>
+  <div class="px-4 mx-auto max-w-screen-xl text-center py-36 text-white">
+      <h1 class="font-extrabold text-9xl tracking-wide mb-4 uppercase italic">{callToAction}</h1>
+      <a href="#about" class="yellowBG  p-2 uppercase text-black font-bold">{buttonText}</a>
+  </div>
+</header>

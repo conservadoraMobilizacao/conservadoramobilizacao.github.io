@@ -1,0 +1,46 @@
+---
+interface Props {
+  callToAction: string;
+}
+
+const { callToAction } = Astro.props;
+const imageURL = "brazil-sao-paulo-r-jose-maria-lisboa-drone.jpg";
+const bgStyle = { backgroundImage: `url('/images/${imageURL}')` };
+const content = [
+  {
+    heading: "Mobilização conservadora ",
+    info: "todos os direitos reservados",
+  },
+  {
+    heading: "Email",
+    info: "edsonsalomaosp@gmail.com ",
+  },
+  {
+    heading: "Numero de telefone",
+    info: "(11)96080-9999",
+  },
+];
+---
+
+<footer
+  class="bg-cover bg-no-repeat bg-gray-700 bg-blend-multiply"
+  style={bgStyle}
+>
+  <div class="mx-auto max-w-screen-xl text-center">
+    <h1
+      class="font-extrabold text-5xl yellowText tracking-wide uppercase italic p-36 "
+    >
+      {callToAction}
+    </h1>
+    <div class="yellowBG grid grid-cols-1 md:grid-cols-3">
+      {
+        content.map((item) => (
+          <div class="p-12">
+            <h1 class="uppercase text-2xl italic">{item.heading}</h1>
+            <p>{item.info}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</footer>

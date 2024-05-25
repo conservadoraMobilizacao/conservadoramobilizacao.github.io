@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  linkText: string;
+  imageOne:string;
+  imageTwo:string;
+}
+const { linkText, imageOne, imageTwo } = Astro.props;
+---
+
+<section id="about" class="py-12">
+  <div class="grid grid-cols-2 p-4">
+    <div>
+      <h1 class="text-white text-4xl italic max-w-xs yellowText pb-8">Extrema-esquerda planeja controlar a capital!</h1>
+      <p class="text-white max-w-sm">
+        O PSOL partido de extrema-esquerda, planeja ter o controle do executivo e formar maioria no legislativo da capital. 
+        E com isso obter autonomia total para promover suas ideias destrutivas, que vão na contra-mão dos interesses da população.
+      </p>
+      <!-- <p class="text-white mt-8 underline">
+        <a href={linkText}>Learn more</a>
+      </p>-->
+    </div>
+    <div class="grid grid-cols-2">
+      <figure>
+        <Image src={'/images/'+imageOne} 
+        width={600} 
+        height={800} 
+        alt="camara legislativa de são paulo" 
+        class="rounded-md object-cover w-48"/>
+        <span class="yellowText"><strong>Camara legislativa</strong></span>
+      </figure>
+      <figure>
+        <Image src={'/images/'+imageTwo}
+         width={600} height={800} alt="prefeitura de são paulo" class="rounded-md object-cover w-48 pt-8"/>
+        <span class="yellowText"><strong> Prefeitura</strong></span>
+      </figure>
+    </div>
+  </div>
+</section>

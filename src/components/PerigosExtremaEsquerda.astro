@@ -1,0 +1,60 @@
+---
+const perigos = [
+{
+    cardURL: "escola-vazia.jpg",
+    title:"Ideologia de Genero",
+    description:
+      "Parte das pautas da extrema-esquerda é colocar na mente de crianças e adolecentes, que ser homem ou mulher não passa de uma construção social ",
+  },{
+    cardURL: "desencarceramento.jpg",
+    title:"Desencarceramento",
+    description:
+      "Como se não bastasse a imensa taxa de crimes, que temos em nossa cidade a extrema esquerda acha que faz sentido soltar ainda mais criminosos",
+  },
+  {
+    cardURL: "drogas.jpg",
+    title:"Legalização das drogas",
+    description:
+      "Sem nenhum embazamento eles alegam que drogas legais iriam infraquecer o trafico e assim lutam para descriminalizar as drogas. ",
+  },
+  {
+    cardURL: "aborto.jpg",
+    title:"Abortos",
+    description:
+      "Com o pretexto de dar liberdade as mulheres eles lutam pela legalização de matar ser-humanos antes mesmo de nacerem.",
+  },
+  
+  {
+    cardURL: "invasao-terra.jpeg",
+    title:"Invazões de terra",
+    description:
+      "Com o pretexto de garantir a função social, eles acham legal que invadam qualquer imóvel vazio que não seja o deles.",
+  },
+  
+  {
+    cardURL: "crise.jpg",
+    title:"Desatre Econômico",
+    description:
+      "Eles odeiam organizações privadas e sempre que possível as afasta com taxas e impostos gerando pobreza e desemprego",
+  },
+];
+---
+<section class="py-12">
+  <h1 class="yellowText text-5xl italic uppercase text-center">Perigos da Extrema-esquerda</h1>
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    {
+      perigos.map((perigo)=>(
+        <div class="m-4 text-center">
+          <span class="yellowText text-2xl ">{perigo.title}</span>
+          <img src={'/images/'+perigo.cardURL} alt="perigo" class="object-cover w-full h-48"/>
+          <div class="yellowBG p-8">
+            <p class="pb-4 font-bold">
+              {perigo.description}
+            </p>
+            </div>
+          </div>
+
+      ))
+    }
+  </div>
+</section>
