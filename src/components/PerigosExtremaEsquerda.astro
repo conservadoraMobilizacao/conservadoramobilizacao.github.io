@@ -2,23 +2,27 @@
 const perigos = [
 {
     cardURL: "escola-vazia.jpg",
+    alt:'escola vazia',
     title:"Ideologia de Genero",
     description:
       "Parte das pautas da extrema-esquerda é colocar na mente de crianças e adolecentes, que ser homem ou mulher não passa de uma construção social ",
   },{
     cardURL: "desencarceramento.jpg",
+    alt:'desencarceramento',
     title:"Desencarceramento",
     description:
       "Como se não bastasse a imensa taxa de crimes, que temos em nossa cidade a extrema esquerda acha que faz sentido soltar ainda mais criminosos",
   },
   {
     cardURL: "drogas.jpg",
+    alt:'drogas',
     title:"Legalização das drogas",
     description:
       "Sem nenhum embazamento eles alegam que drogas legais iriam infraquecer o trafico e assim lutam para descriminalizar as drogas. ",
   },
   {
     cardURL: "aborto.jpg",
+    alt:'aborto',
     title:"Abortos",
     description:
       "Com o pretexto de dar liberdade as mulheres eles lutam pela legalização de matar ser-humanos antes mesmo de nacerem.",
@@ -26,6 +30,7 @@ const perigos = [
   
   {
     cardURL: "invasao-terra.jpeg",
+    alt:'invasão de terra',
     title:"Invazões de terra",
     description:
       "Com o pretexto de garantir a função social, eles acham legal que invadam qualquer imóvel vazio que não seja o deles.",
@@ -33,6 +38,7 @@ const perigos = [
   
   {
     cardURL: "crise.jpg",
+    alt:'crise',
     title:"Desatre Econômico",
     description:
       "Eles odeiam organizações privadas e sempre que possível as afasta com taxas e impostos gerando pobreza e desemprego",
@@ -46,7 +52,7 @@ const perigos = [
       perigos.map((perigo)=>(
         <div class="m-4 text-center">
           <span class="yellowText text-2xl ">{perigo.title}</span>
-          <img src={'/images/'+perigo.cardURL} alt="perigo" class="object-cover w-full h-48"/>
+          <img src={'/images/'+perigo.cardURL} alt={perigo.alt} class="object-cover w-full h-48"/>
           <div class="yellowBG p-8">
             <p class="pb-4 font-bold">
               {perigo.description}
