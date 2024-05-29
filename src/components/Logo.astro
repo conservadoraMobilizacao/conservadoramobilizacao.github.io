@@ -7,7 +7,7 @@ const {companyName} = Astro.props;
 const logoURL  = "logo.jpg"
 
 ---
-<div class="logo flex" >
+<div class="logo flex items-center" >
     <figure>
       <img src=`/images/${logoURL}` alt={companyName}/>
     </figure>
@@ -22,7 +22,7 @@ const logoURL  = "logo.jpg"
     position: Absolute;
   }
   .logo figure{
-    height: 186px;
+    height: 79px;
     width: 186px;
   }
   .logo figure img{
